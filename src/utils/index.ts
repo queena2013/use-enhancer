@@ -1,3 +1,3 @@
 export { compose } from './compose';
-export { isPlainObject } from './isplainobject';
+export { isPlainObject } from './isplainObject';
 export * from './type';

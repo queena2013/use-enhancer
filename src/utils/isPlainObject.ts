@@ -1,6 +1,6 @@
 type TIsPlainObject = (obj: any) => boolean;
 
-export const isPlainObject = obj => {
+export const isPlainObject: TIsPlainObject = obj => {
   if (typeof obj !== 'object' || obj === null) {
     return false;
   }

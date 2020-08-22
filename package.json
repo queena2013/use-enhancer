@@ -42,7 +42,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "use-enhancer",
+  "name": "@ivliu/use-enhancer",
   "author": "鹈鹕",
   "module": "dist/use-enhancer.esm.js",
   "devDependencies": {

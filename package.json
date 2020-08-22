@@ -3,9 +3,20 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "description": "基于useReducer的dispatch增强器",
+  "repository": "https://github.com/IVLIU/use-enhancer",
   "files": [
     "dist",
     "src"
+  ],
+  "keywords": [
+    "redux",
+    "reducer",
+    "state",
+    "hooks",
+    "useReducer",
+    "dispatch",
+    "enhancer"
   ],
   "engines": {
     "node": ">=10"

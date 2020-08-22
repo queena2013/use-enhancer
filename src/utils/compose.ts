@@ -1,3 +1,4 @@
+import { isPlainObject } from './isplainobject';
 import { TNext } from './type';
 
 type TCompose = (callbacks: TCallback[], options?: Partial<TOptions>) => TLink;
@@ -37,7 +38,19 @@ export const compose: TCompose = (callbacks, options = {}) => {
     if(isExecuting) {
       return;
     }
+    if(!isPlainObject(action)) {
+      throw new Error(
+        'Actions must be plain objects. ' +
+          'Use custom middleware for async actions.'
+      );
+    }
     if(action) {
+      if (typeof action.type === 'undefined') {
+        throw new Error(
+          'Actions may not have an undefined "type" property. ' +
+            'Have you misspelled a constant?'
+        )
+      };
       if(!effect) {
         effect = {
           action,
